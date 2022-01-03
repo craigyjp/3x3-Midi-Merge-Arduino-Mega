@@ -6,7 +6,7 @@ www.freshnelly.com/midimerge.htm
 Feel free to modify this to you liking but if you start selling them, you will require explicit permission
 fresh@freshnelly.com
 
-Arduino UNO version
+Arduino Mega 2560p version
 
 */
 #include <EEPROM.h>
@@ -270,7 +270,7 @@ void setup() {
   // OLEDwerds("M_LEARN", 10, 0, 0);
   //OLEDwerds("M_OUT:1", 0, 0, 0);
 
-  if ( !digitalRead(12) && !digitalRead(11)) factory(); //hold up & down buttons to do factory reset, no warning!
+  if ( !digitalRead(UP_BUTTON) && !digitalRead(DOWN_BUTTON)) factory(); //hold up & down buttons to do factory reset, no warning!
   user = EEPROM.read(2047);
   userSel();
   // String ars = name; ars += afterSpaces;

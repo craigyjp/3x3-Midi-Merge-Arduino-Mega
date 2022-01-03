@@ -14,7 +14,7 @@ void serialEvent1() {
         out3circle[oc3] = 0xF8; oc3++;
       }
       analogWrite(IN_LED1, 20); inLED1 = 20;
-      Serial.print("MIDI DATA 1");
+      //Serial.print("MIDI DATA 1");
     } else {
       //Serial1.write(midi1in);
       rxMIDI1();
